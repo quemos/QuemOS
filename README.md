@@ -33,8 +33,17 @@ chroot quemos-chroot /bin/bash
 
 ```
 echo 'deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware' > /etc/apt/sources.list
+```
+
+```
 echo 'deb http://deb.debian.org/debian-security trixie-security main contrib non-free non-free-firmware' >> /etc/apt/sources.list
+```
+
+```
 echo 'deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware' >> /etc/apt/sources.list
+```
+
+```
 echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/apt/sources.list.d/quemos.list 
 ```
 
