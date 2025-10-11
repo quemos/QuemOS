@@ -1,0 +1,15 @@
+rm /usr/share/gnome-background-properties/debian-*.xml
+rm /usr/share/desktop-base/debian-logos
+rm /usr/share/pixmaps/debian-logo.png
+
+
+# Tema Default
+rm /etc/alternatives/desktop-theme
+rm /usr/share/desktop-base/desktop-theme
+update-alternatives --remove-all desktop-theme
+update-alternatives --install /usr/share/desktop-base/desktop-theme desktop-theme /usr/share/desktop-base/delta-theme 100
+update-alternatives --set desktop-theme /usr/share/desktop-base/delta-theme
+rm /usr/share/icons/desktop-base
+#Control
+readlink -f /usr/share/desktop-base/desktop-theme
+
