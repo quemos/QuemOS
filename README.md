@@ -1,4 +1,4 @@
-QuemOS Live ISO Kurulum ve Derleme Talimatları
+# QuemOS Live ISO Kurulum ve Derleme Talimatları
 ==============================================
 
 Bu dosya QuemOS (Debian tabanlı) bir sistemin sıfırdan nasıl derleneceğini anlatır.
