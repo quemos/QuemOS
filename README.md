@@ -20,25 +20,27 @@ echo "APT::Sandbox::User root;" > quemos-chroot/etc/apt/apt.conf.d/99sandboxroot
 
 ```chroot quemos-chroot /bin/bash```
 
-```echo 'deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware' > /etc/apt/sources.list
+```
+echo 'deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware' > /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian-security trixie-security main contrib non-free non-free-firmware' >> /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware' >> /etc/apt/sources.list
-echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/apt/sources.list.d/quemos.list ```
+echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/apt/sources.list.d/quemos.list 
+```
 
 ```apt-get update```
 
 
 ## 4. Temel sistem ve GNOME masaüstünü kurun
 
-apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-gtk gnome-core gdm3 gnome-tweaks gnome-software gnome-software-plugin-flatpak network-manager network-manager-gnome pipewire wireplumber pavucontrol evince eog gnome-boxes gvfs-backends fonts-noto fonts-dejavu libreoffice flatpak gdebi remmina remmina-plugin-rdp remmina-plugin-vnc remmina-plugin-spice extrepo live-boot live-config wine winetricks gnome-shell-extensions gnome-shell-extension-prefs chrome-gnome-shell bleachbit gvfs gvfs-backends gvfs-fuse -y
-
-curl -fsS https://dl.brave.com/install.sh | sh
-
+```
+apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-gtk gnome-core gdm3 gnome-tweaks gnome-software gnome-software-plugin-flatpak network-manager network-manager-gnome pipewire wireplumber pavucontrol evince eog gnome-boxes gvfs-backends fonts-noto fonts-dejavu libreoffice flatpak gdebi remmina remmina-plugin-rdp remmina-plugin-vnc remmina-plugin-spice extrepo live-boot live-config wine winetricks gnome-shell-extensions gnome-shell-extension-prefs chrome-gnome-shell bleachbit gvfs gvfs-backends gvfs-fuse -y && curl -fsS https://dl.brave.com/install.sh | sh
+```
 
 ## 5. Flatpak’i etkinleştirin
 
+```
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
+```
 
 ## 6. Waydroid kurun
 
