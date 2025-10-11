@@ -90,7 +90,7 @@ cd /tmp/
 ```
 
 ```
-wget https://github.com/quemos/deb/releases/download/deb/17g-installer_1.0_all.deb
+wget https://github.com/quemos/17g-installer/releases/download/17g/17g-installer_1.0_all.deb
 ```
 
 ```
