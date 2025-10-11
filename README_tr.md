@@ -3,6 +3,7 @@
 Bu dosya QuemOS (Debian tabanlı) bir sistemin sıfırdan nasıl derleneceğini anlatır.
 Tüm işlemler root yetkisiyle yapılmalıdır.
 
+[İngilizce Anlatım](https://github.com/quemos/QuemOS/blob/beta/README.md)
 
 ## 1. Gerekli paketleri ana makinenize kurun
 ```
