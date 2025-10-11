@@ -68,6 +68,9 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ```
 curl -s https://repo.waydro.id | bash -s trixie
+```
+
+```
 apt install waydroid -y
 ```
 
