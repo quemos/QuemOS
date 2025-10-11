@@ -2,6 +2,7 @@
 
 This document explains step by step how to build a QuemOS (Debian-based) system from scratch.
 All commands must be executed with root privileges.
+[Turkish Explanation](https://github.com/quemos/QuemOS/blob/beta/README_tr.md)
 
 ## 1. Install required packages on your host machine
 ```
