@@ -19,7 +19,9 @@ echo "APT::Sandbox::User root;" > quemos-chroot/etc/apt/apt.conf.d/99sandboxroot
 
 ## 3. Chroot ortamına girin ve kaynakları ayarlayın
 
-```chroot quemos-chroot /bin/bash```
+```
+chroot quemos-chroot /bin/bash
+```
 
 ```
 echo 'deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware' > /etc/apt/sources.list
@@ -28,7 +30,9 @@ echo 'deb http://deb.debian.org/debian trixie-updates main contrib non-free non-
 echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/apt/sources.list.d/quemos.list 
 ```
 
-```apt-get update```
+```
+apt-get update
+```
 
 
 ## 4. Temel sistem ve GNOME masaüstünü kurun
