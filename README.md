@@ -4,7 +4,7 @@ Bu dosya QuemOS (Debian tabanlı) bir sistemin sıfırdan nasıl derleneceğini 
 Tüm işlemler root yetkisiyle yapılmalıdır.
 
 
-##1. Gerekli paketleri kurun
+## 1. Gerekli paketleri kurun
 --------------------------
 apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi-ia32-bin grub-efi
 
