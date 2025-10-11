@@ -12,12 +12,8 @@ Tüm işlemler root yetkisiyle yapılmalıdır.
 
 ```
 mkdir quemos-chroot
-```
-```
 debootstrap --arch=amd64 --no-merged-usr stable quemos-chroot https://deb.debian.org/debian
 chown root quemos-chroot
-```
-```
 echo "APT::Sandbox::User root;" > quemos-chroot/etc/apt/apt.conf.d/99sandboxroot
 ```
 
