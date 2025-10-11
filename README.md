@@ -7,7 +7,7 @@ Tüm işlemler root yetkisiyle yapılmalıdır.
 ## 1. Gerekli paketleri ana makinenize kurun
 ```apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi-ia32-bin grub-efi```
 
---------------------------
+
 ## 2. Boş Debian kök sistemi oluşturun
 
 mkdir quemos-chroot
@@ -18,14 +18,14 @@ echo "APT::Sandbox::User root;" > quemos-chroot/etc/apt/apt.conf.d/99sandboxroot
 
 ## 3. Chroot ortamına girin ve kaynakları ayarlayın
 
-chroot quemos-chroot /bin/bash
+```chroot quemos-chroot /bin/bash```
 
-echo 'deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware' > /etc/apt/sources.list
+```echo 'deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware' > /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian-security trixie-security main contrib non-free non-free-firmware' >> /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware' >> /etc/apt/sources.list
-echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/apt/sources.list.d/quemos.list
+echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/apt/sources.list.d/quemos.list ```
 
-apt-get update
+```apt-get update```
 
 
 ## 4. Temel sistem ve GNOME masaüstünü kurun
@@ -47,7 +47,7 @@ apt install waydroid -y
 
 
 ## 7. Donanım firmware paketlerini yükleyin (isteğe bağlı)
--------------------------------------------------------
+
 apt-get install bluez-firmware firmware-amd-graphics firmware-atheros \
   firmware-b43-installer firmware-b43legacy-installer firmware-bnx2 \
   firmware-bnx2x firmware-brcm80211 firmware-cavium firmware-intel-sound \
