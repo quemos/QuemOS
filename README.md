@@ -5,15 +5,23 @@ Tüm işlemler root yetkisiyle yapılmalıdır.
 
 
 ## 1. Gerekli paketleri ana makinenize kurun
-```apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi-ia32-bin grub-efi```
+```
+apt-get install debootstrap xorriso squashfs-tools mtools grub-pc-bin grub-efi-ia32-bin grub-efi
+```
 
 
 ## 2. Boş Debian kök sistemi oluşturun
 
 ```
 mkdir quemos-chroot
+```
+
+```
 debootstrap --arch=amd64 --no-merged-usr stable quemos-chroot https://deb.debian.org/debian
 chown root quemos-chroot
+```
+
+```
 echo "APT::Sandbox::User root;" > quemos-chroot/etc/apt/apt.conf.d/99sandboxroot
 ```
 
