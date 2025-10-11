@@ -82,6 +82,8 @@ apt-get install bluez-firmware firmware-amd-graphics firmware-atheros \
 ```
 cd /tmp/
 ```
+
+```
 wget https://github.com/quemos/deb/releases/download/deb/17g-installer_1.0_all.deb
 ```
 
@@ -103,33 +105,85 @@ umount -lf -R quemos-chroot/* 2>/dev/null
 ```
 
 ## 10. Cleanup
+```
 chroot quemos-chroot apt-get autoremove
+```
+
+```
 chroot quemos-chroot apt-get clean
+```
+
+```
 rm -f quemos-chroot/root/.bash_history
+```
+
+```
 rm -rf quemos-chroot/var/lib/apt/lists/*
+```
+
+```
 find quemos-chroot/var/log/ -type f | xargs rm -f
+```
 
 ## 11. Prepare ISO directory
+```
 mkdir isowork
+```
+
+```
 mksquashfs quemos-chroot filesystem.squashfs -comp gzip -wildcards
+```
+
+```
 mkdir -p isowork/live
+```
+
+```
 mv filesystem.squashfs isowork/live/filesystem.squashfs
+```
 
 ## 12. Copy kernel and initrd
+```
 ls quemos-chroot/boot/
+```
+
+```
 cp -pf quemos-chroot/boot/initrd.img-5.7.0-1-amd64 isowork/live/initrd.img
+```
+
+```
 cp -pf quemos-chroot/boot/vmlinuz-5.7.0-1-amd64 isowork/live/vmlinuz
+```
 
 ## 13. Create GRUB configuration
+```
 mkdir -p isowork/boot/grub/
+```
+
+```
 echo 'insmod all_video' > isowork/boot/grub/grub.cfg
+```
+
+```
 echo 'menuentry "Start QuemOS Live" --class debian {' >> isowork/boot/grub/grub.cfg
+```
+
+```
 echo '    linux /live/vmlinuz boot=live live-config live-media-path=/live --' >> isowork/boot/grub/grub.cfg
+```
+
+```
 echo '    initrd /live/initrd.img' >> isowork/boot/grub/grub.cfg
+```
+
+```
 echo '}' >> isowork/boot/grub/grub.cfg
+```
 
 ## 14. Build the ISO
+```
 grub-mkrescue isowork -o quemos-live.iso
+```
 
 Notes:
 - This will generate a bootable "quemos-live.iso".
