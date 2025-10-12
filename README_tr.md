@@ -214,7 +214,7 @@ grub-mkrescue isowork -o quemos-live.iso
 - İmaj, UEFI ve BIOS desteklidir.
 - Eğer farklı tema, kullanıcı adı veya yapılandırma isteniyorsa bunlar chroot içindeyken yapılmalıdır.
 
-#Ek:
+# Ek:
   ```
   dpkg --purge --force-all apname
   ```
