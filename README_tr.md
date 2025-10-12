@@ -209,8 +209,16 @@ grub-mkrescue isowork -o quemos-live.iso
 ```
 
 
-Notlar:
--------
+# Notlar:
 - Bu işlemler sonunda “quemos-live.iso” adlı canlı sistem oluşturulur.
 - İmaj, UEFI ve BIOS desteklidir.
 - Eğer farklı tema, kullanıcı adı veya yapılandırma isteniyorsa bunlar chroot içindeyken yapılmalıdır.
+
+  #Ek:
+  ```
+  dpkg --purge --force-all apname
+  ```
+
+  ```
+  apt autoremove --purge -y
+  ```
