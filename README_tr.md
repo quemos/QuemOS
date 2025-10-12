@@ -216,7 +216,7 @@ grub-mkrescue isowork -o quemos-live.iso
 
 # Ek:
   ```
-  dpkg --purge --force-all apname
+  dpkg --purge --force-all appname
   ```
 
   ```
