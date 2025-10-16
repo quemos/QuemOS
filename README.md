@@ -51,7 +51,7 @@ apt-get update
 
 ## 4. Install core system and GNOME desktop
 ```
-apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-gtk gnome-core gdm3 gnome-tweaks gnome-software gnome-software-plugin-flatpak network-manager network-manager-gnome pipewire wireplumber pavucontrol evince eog gnome-boxes gvfs-backends fonts-noto fonts-dejavu libreoffice flatpak gdebi remmina remmina-plugin-rdp remmina-plugin-vnc remmina-plugin-spice extrepo live-boot live-config wine winetricks gnome-shell-extensions gnome-shell-extension-prefs chrome-gnome-shell bleachbit gvfs gvfs-backends gvfs-fuse nautilus-admin -y && curl -fsS https://dl.brave.com/install.sh | sh
+apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-gtk gnome-core gdm3 gnome-tweaks gnome-software gnome-software-plugin-flatpak network-manager network-manager-gnome pipewire wireplumber pavucontrol evince eog gnome-boxes gvfs-backends fonts-noto fonts-dejavu libreoffice flatpak gdebi remmina remmina-plugin-rdp remmina-plugin-vnc remmina-plugin-spice extrepo live-boot live-config wine winetricks gnome-shell-extensions gnome-shell-extension-prefs chrome-gnome-shell bleachbit gvfs gvfs-backends gvfs-fuse nautilus-admin timeshift os-prober -y && curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
 ```
