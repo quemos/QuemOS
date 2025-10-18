@@ -60,7 +60,7 @@ apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-
 ```
 
 ```
-apt install quemos-theme -y
+apt install quemos-theme quemos-drivermanager -y
 ```
 
 
