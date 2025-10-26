@@ -49,10 +49,13 @@ echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/ap
 apt-get update
 ```
 
-## 4. Install core system and KDE desktop
+## 4. Install core system and Plesma desktop
 ```
-apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-qt kde-standard sddm konsole dolphin kate ark okular gwenview kcalc plasma-discover plasma-discover-backend-flatpak network-manager plasma-nm pipewire wireplumber pavucontrol fonts-noto fonts-dejavu libreoffice flatpak gdebi krdc freerdp2-x11 tigervnc-viewer spice-client-gtk extrepo live-boot live-config wine winetricks bleachbit timeshift os-prober -y && curl -fsS https://dl.brave.com/install.sh | sh
+apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-qt kde-standard sddm konsole dolphin kate ark okular gwenview kcalc plasma-discover plasma-discover-backend-flatpak network-manager plasma-nm pipewire wireplumber pavucontrol fonts-noto fonts-dejavu libreoffice flatpak gdebi krdc freerdp2-x11 tigervnc-viewer spice-client-gtk extrepo live-boot live-config wine winetricks bleachbit timeshift os-prober -y
+```
 
+```
+curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
 ```
