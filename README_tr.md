@@ -52,6 +52,13 @@ echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/ap
 apt-get update
 ```
 
+```
+apt install curl gnupg -y
+```
+
+```
+curl -fsSL https://quemos.github.io/repo/public.key | gpg --dearmor -o /etc/apt/trusted.gpg.d/quemos.gpg
+```
 
 ## 4. Temel sistem ve Plasma masaüstünü kurun
 
