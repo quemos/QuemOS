@@ -25,6 +25,7 @@ echo "APT::Sandbox::User root;" > quemos-chroot/etc/apt/apt.conf.d/99sandboxroot
 ```
 
 ## 3. Enter the chroot environment and configure repositories
+
 ```
 chroot quemos-chroot /bin/bash
 ```
@@ -49,9 +50,17 @@ echo "deb [trusted=yes] https://quemos.github.io/repo stable main" | tee /etc/ap
 apt-get update
 ```
 
+```
+apt install curl gnupg -y
+```
+
+```
+curl -fsSL https://quemos.github.io/repo/public.key | gpg --dearmor -o /etc/apt/trusted.gpg.d/quemos.gpg
+```
+
 ## 4. Install core system and Plesma desktop
 ```
-apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-qt kde-standard sddm konsole dolphin kate ark okular gwenview kcalc plasma-discover plasma-discover-backend-flatpak network-manager plasma-nm pipewire wireplumber pavucontrol fonts-noto fonts-dejavu libreoffice flatpak gdebi krdc freerdp2-x11 tigervnc-viewer spice-client-gtk extrepo live-boot live-config wine winetricks bleachbit timeshift os-prober -y
+apt-get install linux-headers-amd64 linux-image-amd64 grub-pc-bin grub-efi grub-efi-ia32-bin ssh sudo htop fastfetch wget git curl unzip zip tar xz-utils gnupg ca-certificates vlc transmission-qt kde-standard sddm konsole dolphin kate ark okular gwenview kcalc plasma-discover plasma-discover-backend-flatpak network-manager plasma-nm pipewire wireplumber pavucontrol fonts-noto fonts-dejavu libreoffice flatpak gdebi krdc tigervnc-viewer spice-client-gtk extrepo live-boot live-config wine winetricks bleachbit timeshift os-prober -y
 ```
 
 ```
@@ -60,6 +69,10 @@ curl -fsS https://dl.brave.com/install.sh | sh
 
 ```
 apt install quemos-theme quemos-drivermanager -y
+```
+
+```
+apt remove akregator kmail konqueror ktnef pim-data-exporter pim-sieve-editor dragonplayer juk kaddressbook korganizer
 ```
 
 ## 5. Enable Flatpak
