@@ -74,6 +74,9 @@ curl -fsS https://dl.brave.com/install.sh | sh
 apt install quemos-theme quemos-drivermanager -y
 ```
 
+```
+apt remove akregator kmail konqueror ktnef pim-data-exporter pim-sieve-editor dragonplayer juk kaddressbook korganizer
+```
 
 ## 5. Flatpak’i etkinleştirin
 
